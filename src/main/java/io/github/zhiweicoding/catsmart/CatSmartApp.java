@@ -15,6 +15,7 @@ public class CatSmartApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        LoadFontSupport.loadFont();
         CSSFX.start();
 
         FXMLLoader loader = new FXMLLoader(SelfXMlLoader.loadURL("fxml/CatSmartApp.fxml"));
