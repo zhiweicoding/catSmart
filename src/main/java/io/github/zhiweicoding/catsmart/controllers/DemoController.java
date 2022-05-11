@@ -26,7 +26,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static io.github.palexdev.materialfx.MFXResourcesLoader.loadURL;
+import static io.github.zhiweicoding.catsmart.SelfXMlLoader.loadURL;
 
 public class DemoController implements Initializable {
     private final Stage stage;

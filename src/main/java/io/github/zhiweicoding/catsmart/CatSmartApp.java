@@ -13,23 +13,23 @@ import javafx.stage.StageStyle;
 
 public class CatSmartApp extends Application {
 
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		CSSFX.start();
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        CSSFX.start();
 
-		FXMLLoader loader = new FXMLLoader(MFXResourcesLoader.loadURL("fxml/Demo.fxml"));
-		loader.setControllerFactory(c -> new DemoController(primaryStage));
-		Parent root = loader.load();
-		Scene scene = new Scene(root);
-		scene.setFill(Color.TRANSPARENT);
-		primaryStage.initStyle(StageStyle.TRANSPARENT);
-		primaryStage.setScene(scene);
-		primaryStage.setTitle("MaterialFX Demo");
-		primaryStage.show();
-	}
+        FXMLLoader loader = new FXMLLoader(SelfXMlLoader.loadURL("fxml/CatSmartApp.fxml"));
+        loader.setControllerFactory(c -> new DemoController(primaryStage));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("智能后台管理");
+        primaryStage.show();
+    }
 
 
-	public static void main(String[] args) {
-		launch();
-	}
+    public static void main(String[] args) {
+        launch();
+    }
 }

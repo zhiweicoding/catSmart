@@ -17,6 +17,7 @@ module catSmart {
     requires org.kordamp.ikonli.fontawesome5;
     requires org.scenicview.scenicview;
 
-    opens io.github.zhiweicoding.catsmart;
+    opens io.github.zhiweicoding.catsmart to javafx.fxml;
+    exports io.github.zhiweicoding.catsmart;
     opens io.github.zhiweicoding.catsmart.controllers;
 }
