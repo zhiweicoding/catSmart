@@ -111,7 +111,7 @@
                 <version>0.0.8</version>
                 <configuration>
                     <mainClass>
-                        io.github.zhiweicoding.catsmart.Demo
+                        io.github.zhiweicoding.catsmart.CatSmartApp
                     </mainClass>
                 </configuration>
             </plugin>

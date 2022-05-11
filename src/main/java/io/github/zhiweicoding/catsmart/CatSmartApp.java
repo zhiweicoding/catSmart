@@ -11,7 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-public class Demo extends Application {
+public class CatSmartApp extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {

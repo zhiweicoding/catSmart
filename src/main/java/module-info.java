@@ -17,6 +17,6 @@ module catSmart {
     requires org.kordamp.ikonli.fontawesome5;
     requires org.scenicview.scenicview;
 
-    opens io.github.palexdev.materialfx.demo;
-    opens io.github.palexdev.materialfx.demo.controllers;
+    opens io.github.zhiweicoding.catsmart;
+    opens io.github.zhiweicoding.catsmart.controllers;
 }
