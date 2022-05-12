@@ -28,7 +28,7 @@ import java.util.ResourceBundle;
 
 import static io.github.zhiweicoding.catsmart.SelfXMlLoader.loadURL;
 
-public class DemoController implements Initializable {
+public class CatSmartController implements Initializable {
     private final Stage stage;
     private double xOffset;
     private double yOffset;
@@ -58,7 +58,7 @@ public class DemoController implements Initializable {
     @FXML
     private StackPane contentPane;
 
-    public DemoController(Stage stage) {
+    public CatSmartController(Stage stage) {
         this.stage = stage;
         this.toggleGroup = new ToggleGroup();
         ToggleButtonsUtil.addAlwaysOneSelectedSupport(toggleGroup);

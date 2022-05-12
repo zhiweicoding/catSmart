@@ -1,8 +1,7 @@
 package io.github.zhiweicoding.catsmart;
 
 import fr.brouillard.oss.cssfx.CSSFX;
-import io.github.palexdev.materialfx.MFXResourcesLoader;
-import io.github.zhiweicoding.catsmart.controllers.DemoController;
+import io.github.zhiweicoding.catsmart.controllers.CatSmartController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +18,7 @@ public class CatSmartApp extends Application {
         CSSFX.start();
 
         FXMLLoader loader = new FXMLLoader(SelfXMlLoader.loadURL("fxml/CatSmartApp.fxml"));
-        loader.setControllerFactory(c -> new DemoController(primaryStage));
+        loader.setControllerFactory(c -> new CatSmartController(primaryStage));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
