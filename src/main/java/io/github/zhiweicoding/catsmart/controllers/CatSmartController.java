@@ -90,6 +90,15 @@ public class CatSmartController implements Initializable {
 
     private void initializeLoader() {
         MFXLoader loader = new MFXLoader();
+        loader.addView(MFXLoaderBean.of("goodOrderView", loadURL("fxml/TableViews.fxml"))
+                .setBeanToNodeMapper(() -> createToggle("mfx-table", "用品订单管理"))
+                .get());
+        loader.addView(MFXLoaderBean.of("catOrderView", loadURL("fxml/TableViews.fxml"))
+                .setBeanToNodeMapper(() -> createToggle("mfx-square-list", "猫咪销售管理"))
+                .get());
+        loader.addView(MFXLoaderBean.of("adoptOrderView", loadURL("fxml/TableViews.fxml"))
+                .setBeanToNodeMapper(() -> createToggle("mfx-scroll-bar", "领养销售管理"))
+                .get());
         loader.addView(MFXLoaderBean.of("BUTTONS", loadURL("fxml/Buttons.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-circle-dot", "Buttons")).setDefaultRoot(true).get());
         loader.addView(MFXLoaderBean.of("CHECKS_RADIOS_TOGGLES", loadURL("fxml/ChecksRadiosToggles.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-toggle-on", "Checks, Radios, Toggles")).get());
         loader.addView(MFXLoaderBean.of("COMBOS", loadURL("fxml/ComboBoxes.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-list-dropdown", "ComboBoxes")).get());
@@ -102,7 +111,6 @@ public class CatSmartController implements Initializable {
         loader.addView(MFXLoaderBean.of("SCROLL-PANES", loadURL("fxml/ScrollPanes.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-scroll-bar", "Scroll Panes")).get());
         loader.addView(MFXLoaderBean.of("SLIDERS", loadURL("fxml/Sliders.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-sliders", "Sliders")).get());
         loader.addView(MFXLoaderBean.of("STEPPER", loadURL("fxml/Stepper.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-stepper", "Stepper")).get());
-        loader.addView(MFXLoaderBean.of("TABLES", loadURL("fxml/TableViews.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-table", "Tables")).get());
         loader.addView(MFXLoaderBean.of("FONT-RESOURCES", loadURL("fxml/FontResources.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-fonticons", "Font Resources")).get());
         loader.setOnLoadedAction(beans -> {
             List<ToggleButton> nodes = beans.stream()
