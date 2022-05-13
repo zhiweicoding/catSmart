@@ -27,43 +27,17 @@ import java.util.ResourceBundle;
 public class GoodOrderViewController implements Initializable {
 
 	@FXML
-	private MFXTableView<Person> table;
-
-	@FXML
 	private MFXPaginatedTableView<Device> paginated;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		setupTable();
 		setupPaginated();
 
-		table.autosizeColumnsOnInitialization();
 		paginated.autosizeColumnsOnInitialization();
 
 		When.onChanged(paginated.currentPageProperty())
 				.then((oldValue, newValue) -> paginated.autosizeColumns())
 				.listen();
-	}
-
-	private void setupTable() {
-		MFXTableColumn<Person> nameColumn = new MFXTableColumn<>("Name", true, Comparator.comparing(Person::getName));
-		MFXTableColumn<Person> surnameColumn = new MFXTableColumn<>("Surname", true, Comparator.comparing(Person::getSurname));
-		MFXTableColumn<Person> ageColumn = new MFXTableColumn<>("Age", true, Comparator.comparing(Person::getAge));
-
-		nameColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Person::getName));
-		surnameColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Person::getSurname));
-		ageColumn.setRowCellFactory(person -> new MFXTableRowCell<>(Person::getAge) {{
-			setAlignment(Pos.CENTER_RIGHT);
-		}});
-		ageColumn.setAlignment(Pos.CENTER_RIGHT);
-
-		table.getTableColumns().addAll(nameColumn, surnameColumn, ageColumn);
-		table.getFilters().addAll(
-				new StringFilter<>("Name", Person::getName),
-				new StringFilter<>("Surname", Person::getSurname),
-				new IntegerFilter<>("Age", Person::getAge)
-		);
-		table.setItems(Model.people);
 	}
 
 	private void setupPaginated() {
@@ -81,6 +55,7 @@ public class GoodOrderViewController implements Initializable {
 		ownerColumn.setRowCellFactory(device -> new MFXTableRowCell<>(Device::getOwner));
 		stateColumn.setRowCellFactory(device -> new MFXTableRowCell<>(Device::getState));
 		ipColumn.setAlignment(Pos.CENTER_RIGHT);
+
 
 		paginated.getTableColumns().addAll(idColumn, nameColumn, ipColumn, ownerColumn, stateColumn);
 		paginated.getFilters().addAll(

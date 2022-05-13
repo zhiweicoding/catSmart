@@ -19,9 +19,9 @@
 
 .notification .mfx-button {
 	-fx-min-height: 27;
-	-fx-border-color: -mfx-purple;
+	-fx-border-color: -mfx-mainRed;
 	-fx-border-radius: 3;
-	-fx-text-fill: -mfx-purple;
+	-fx-text-fill: -mfx-mainRed;
 }
 
 .notification .mfx-button .mfx-ripple-generator {

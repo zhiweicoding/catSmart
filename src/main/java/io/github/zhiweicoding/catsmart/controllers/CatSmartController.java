@@ -45,6 +45,8 @@ public class CatSmartController implements Initializable {
 
     @FXML
     private MFXFontIcon alwaysOnTopIcon;
+    @FXML
+    private MFXFontIcon maxWindowIcon;
 
     @FXML
     private AnchorPane rootPane;
@@ -67,11 +69,19 @@ public class CatSmartController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         closeIcon.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> Platform.exit());
-        minimizeIcon.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> ((Stage) rootPane.getScene().getWindow()).setIconified(true));
+        minimizeIcon.addEventHandler(MouseEvent.MOUSE_CLICKED, event ->
+                ((Stage) rootPane.getScene().getWindow()).setIconified(true)
+        );
         alwaysOnTopIcon.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
             boolean newVal = !stage.isAlwaysOnTop();
             alwaysOnTopIcon.pseudoClassStateChanged(PseudoClass.getPseudoClass("always-on-top"), newVal);
             stage.setAlwaysOnTop(newVal);
+        });
+
+        maxWindowIcon.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
+            boolean newVal = !stage.isFullScreen();
+            maxWindowIcon.pseudoClassStateChanged(PseudoClass.getPseudoClass("max-windows-icon"), newVal);
+            stage.setFullScreen(newVal);
         });
 
         windowHeader.setOnMousePressed(event -> {
@@ -90,8 +100,9 @@ public class CatSmartController implements Initializable {
 
     private void initializeLoader() {
         MFXLoader loader = new MFXLoader();
-        loader.addView(MFXLoaderBean.of("goodOrderView", loadURL("fxml/TableViews.fxml"))
+        loader.addView(MFXLoaderBean.of("goodOrderView", loadURL("fxml/GoodOrderView.fxml"))
                 .setBeanToNodeMapper(() -> createToggle("mfx-table", "用品订单管理"))
+                .setDefaultRoot(true)
                 .get());
         loader.addView(MFXLoaderBean.of("catOrderView", loadURL("fxml/TableViews.fxml"))
                 .setBeanToNodeMapper(() -> createToggle("mfx-square-list", "猫咪销售管理"))
@@ -99,7 +110,9 @@ public class CatSmartController implements Initializable {
         loader.addView(MFXLoaderBean.of("adoptOrderView", loadURL("fxml/TableViews.fxml"))
                 .setBeanToNodeMapper(() -> createToggle("mfx-scroll-bar", "领养销售管理"))
                 .get());
-        loader.addView(MFXLoaderBean.of("BUTTONS", loadURL("fxml/Buttons.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-circle-dot", "Buttons")).setDefaultRoot(true).get());
+        loader.addView(MFXLoaderBean.of("BUTTONS", loadURL("fxml/Buttons.fxml"))
+                .setBeanToNodeMapper(() -> createToggle("mfx-circle-dot", "Buttons"))
+                .get());
         loader.addView(MFXLoaderBean.of("CHECKS_RADIOS_TOGGLES", loadURL("fxml/ChecksRadiosToggles.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-toggle-on", "Checks, Radios, Toggles")).get());
         loader.addView(MFXLoaderBean.of("COMBOS", loadURL("fxml/ComboBoxes.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-list-dropdown", "ComboBoxes")).get());
         loader.addView(MFXLoaderBean.of("DIALOGS", loadURL("fxml/Dialogs.fxml")).setBeanToNodeMapper(() -> createToggle("mfx-messages", "Dialogs")).setControllerFactory(c -> new DialogsController(stage)).get());
