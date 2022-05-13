@@ -14,14 +14,14 @@
 }
 
 #customBar2 .track {
-	-fx-fill: -mfx-mainRed;
-	-fx-stroke: -mfx-mainRed;
+	-fx-fill: -mfx-mainBlack;
+	-fx-stroke: -mfx-mainBlack;
 	-fx-stroke-width: 2;
 }
 
 #customBar2 .bar1,
 #customBar2 .bar2 {
-	-fx-stroke: -mfx-mainRed;
+	-fx-stroke: -mfx-mainBlack;
 	-fx-stroke-width: 1;
 	-fx-fill: white;
 }

@@ -42,12 +42,9 @@
         <padding>
             <Insets bottom="10.0" left="10.0" top="60.0"/>
         </padding>
-        <Label graphicTextGap="15.0" styleClass="header" text="MaterialFX">
-            <graphic>
-                <MFXFontIcon description="mfx-logo" size="52.0" color="#E02125"/>
-            </graphic>
+        <Label styleClass="header" text="后台超级管理系统">
         </Label>
-        <Label styleClass="menu-label" text="后台超级管理系统">
+        <Label styleClass="menu-label" text="功能列表">
             <VBox.margin>
                 <Insets left="5.0" top="40.0"/>
             </VBox.margin>
@@ -65,5 +62,5 @@
     </VBox>
     <StackPane fx:id="contentPane" layoutX="252.0" layoutY="52.0" prefHeight="150.0" prefWidth="200.0"
                AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="252.0" AnchorPane.rightAnchor="10.0"
-               AnchorPane.topAnchor="51.0"/>
+               AnchorPane.topAnchor="51.0" />
 </AnchorPane>

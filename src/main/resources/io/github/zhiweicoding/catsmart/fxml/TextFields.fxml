@@ -54,7 +54,7 @@
         </GridPane.margin>
     </StackPane>
     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-           styleClass="header-label" text="Text Fields and Password Fields" GridPane.columnSpan="2147483647"/>
+           styleClass="header-label" text="文字和密码输入框" GridPane.columnSpan="2147483647"/>
     <MFXTextField floatingText="Inline Mode" GridPane.rowIndex="1"/>
     <MFXTextField floatMode="BORDER" floatingText="Border Mode" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
     <MFXTextField borderGap="2.0" floatMode="ABOVE" floatingText="Above Mode" GridPane.columnIndex="2"
@@ -80,7 +80,7 @@
         </GridPane.margin>
     </StackPane>
     <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-           styleClass="header-label" text="Features" GridPane.columnSpan="2147483647" GridPane.rowIndex="4"/>
+           styleClass="header-label" text="其他输入框" GridPane.columnSpan="2147483647" GridPane.rowIndex="4"/>
     <MFXTextField animated="false" floatingText="Not Animated" GridPane.rowIndex="5"/>
     <MFXTextField allowEdit="false" caretVisible="false" floatingText="As Label" selectable="false" text="Label's text"
                   GridPane.columnIndex="1" GridPane.rowIndex="5"/>

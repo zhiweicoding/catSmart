@@ -18,7 +18,6 @@
 
 package io.github.zhiweicoding.catsmart.controllers;
 
-import io.github.palexdev.materialfx.MFXResourcesLoader;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXIconWrapper;
 import io.github.palexdev.materialfx.controls.MFXNotificationCenter;
@@ -32,6 +31,7 @@ import io.github.palexdev.materialfx.notifications.MFXNotificationCenterSystem;
 import io.github.palexdev.materialfx.notifications.MFXNotificationSystem;
 import io.github.palexdev.materialfx.notifications.base.INotification;
 import io.github.palexdev.materialfx.utils.RandomUtils;
+import io.github.zhiweicoding.catsmart.SelfXMlLoader;
 import io.github.zhiweicoding.catsmart.model.Model;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
@@ -196,7 +196,7 @@ public class NotificationsController {
 			container.setTop(header);
 			container.setCenter(contentLabel);
 			container.setBottom(actionsBar);
-			container.getStylesheets().add(MFXResourcesLoader.load("css/ExampleNotification.css"));
+			container.getStylesheets().add(SelfXMlLoader.load("css/ExampleNotification.css"));
 			container.setMinHeight(200);
 			container.setMaxWidth(400);
 

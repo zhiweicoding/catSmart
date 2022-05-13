@@ -17,21 +17,21 @@
 }
 
 #custom {
-	-fx-background-color: -mfx-mainRed;
+	-fx-background-color: -mfx-mainBlack;
 	-fx-text-fill: white
 }
 
 .outline-button {
 	-fx-background-color: transparent;
-	-fx-border-color: -mfx-mainRed;
+	-fx-border-color: -mfx-mainBlack;
 	-fx-border-radius: 3;
 
-	-fx-text-fill: -mfx-mainRed;
+	-fx-text-fill: -mfx-mainBlack;
 }
 
 .outline-button:hover,
 .outline-button:focused {
-	-fx-background-color: -mfx-mainRed;
+	-fx-background-color: -mfx-mainBlack;
 	-fx-text-fill: white;
 }
 

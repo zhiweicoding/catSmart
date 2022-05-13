@@ -19,9 +19,9 @@
 }
 
 #custList {
-	-fx-background-color: -mfx-mainRed;
+	-fx-background-color: -mfx-mainBlack;
 	-fx-background-radius: 10;
-	-fx-border-color: -mfx-mainRed;
+	-fx-border-color: -mfx-mainBlack;
 	-fx-border-radius: 10;
 	-fx-padding: 4;
 }
@@ -31,7 +31,7 @@
 }
 
 #custList:focused {
-	-fx-border-color: -mfx-mainRed;
+	-fx-border-color: -mfx-mainBlack;
 }
 
 #custList .virtual-flow .mfx-list-cell {
@@ -63,8 +63,8 @@
 }
 
 .mfx-button {
-	-fx-background-color: -mfx-mainRed;
-	-fx-border-color: -mfx-mainRed;
+	-fx-background-color: -mfx-mainBlack;
+	-fx-border-color: -mfx-mainBlack;
 	-fx-border-radius: 3;
 	-fx-text-fill: white;
 	-fx-font-family: 'Visby Round CF Demi Bold';
