@@ -19,6 +19,11 @@ import java.net.URL;
 import java.util.Comparator;
 import java.util.ResourceBundle;
 
+/**
+ * 商品订单管理界面控制器
+ * @creator by zhiwei
+ * @email diaozhiwei2k@163.com
+ */
 public class GoodOrderViewController implements Initializable {
 
 	@FXML
