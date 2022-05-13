@@ -3,7 +3,14 @@ package io.github.zhiweicoding.catsmart.model;
 import io.github.palexdev.materialfx.utils.RandomUtils;
 import javafx.beans.property.*;
 
-public class Device {
+/**
+ * 订单实体类
+ *
+ * @creator zhiwei
+ * @github zhiweicoding
+ * @email diaozhiwei2k@163.com
+ */
+public class OrderEntity {
     public enum State {
         ONLINE, OFFLINE
     }
@@ -14,7 +21,7 @@ public class Device {
     private final StringProperty owner = new SimpleStringProperty("");
     private final ObjectProperty<State> state = new SimpleObjectProperty<>();
 
-    public Device(int id, String name, String ip, String owner, State state) {
+    public OrderEntity(int id, String name, String ip, String owner, State state) {
         setID(id);
         setName(name);
         setIP(ip);
